@@ -1,0 +1,6 @@
+flowchart TB
+  Camera[Optional camera frame] --> Vision[Local CV preprocessing]
+  Vision --> State[Validated cube state]
+  State --> Solver[Deterministic solver]
+  Session[Gameplay events] --> Store[Minimal session store]
+  Store --> Features[Aggregated ML features]

@@ -1,0 +1,11 @@
+sequenceDiagram
+  participant Player
+  participant Client
+  participant API
+  participant Solver
+  Player->>Client: Enter cube colors
+  Client->>API: Submit configuration
+  API->>Solver: Validate and solve
+  Solver-->>API: Move sequence or error
+  API-->>Client: Result and explanation
+  Client-->>Player: Show solution

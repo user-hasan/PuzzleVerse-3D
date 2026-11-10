@@ -1,0 +1,6 @@
+flowchart TB
+  UI[Flutter UI] --> API[FastAPI REST API]
+  API --> DB[(Relational database)]
+  API --> Solver[Deterministic solver]
+  API --> CV[OpenCV pipeline]
+  API --> ML[ML experiment/inference boundary]

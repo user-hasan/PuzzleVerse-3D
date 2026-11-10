@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+
+# Flutter/Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+build/
+
+# Data and local secrets
+.env
+.env.*
+!.env.example
+*.sqlite3
+*.db
+machine-learning/datasets/*
+machine-learning/models/*
+!machine-learning/datasets/README.md
+!machine-learning/models/README.md
+
+# IDE/OS
+.vscode/
+.idea/
+.DS_Store
+
+# Generated local reports
+coverage.xml
+htmlcov/

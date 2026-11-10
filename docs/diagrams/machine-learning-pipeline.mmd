@@ -1,0 +1,6 @@
+flowchart LR
+  Data[Consented session data] --> Features[Feature extraction]
+  Features --> Split[Player-level train/validation/test split]
+  Split --> Baseline[Interpretable baseline]
+  Baseline --> Metrics[Metrics and error analysis]
+  Metrics --> Recommendation[Versioned recommendation]

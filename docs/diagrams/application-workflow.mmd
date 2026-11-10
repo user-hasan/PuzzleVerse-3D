@@ -1,0 +1,6 @@
+flowchart LR
+  Start[Choose puzzle] --> Configure[Configure or capture state]
+  Configure --> Validate[Validate state]
+  Validate --> Play[Play or request solution]
+  Play --> Session[Record session features]
+  Session --> Recommend[Optional recommendation]

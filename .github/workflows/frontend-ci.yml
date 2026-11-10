@@ -1,0 +1,13 @@
+name: Frontend CI
+on:
+  push:
+  pull_request:
+jobs:
+  foundation-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Explain current frontend status
+        run: |
+          test -f frontend/README.md
+          echo "Flutter application is intentionally not initialized until the 3D decision is approved."

@@ -1,0 +1,16 @@
+name: Research task
+description: Propose a reproducible ML, CV, or algorithm investigation.
+title: "research: "
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Research question
+    validations:
+      required: true
+  - type: textarea
+    id: method
+    attributes:
+      label: Candidate data, method, and metrics
+    validations:
+      required: true
