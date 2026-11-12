@@ -3,8 +3,8 @@
   <h1>PuzzleVerse-3D</h1>
   <p><strong>An extensible 3D puzzle platform with machine learning-assisted play.</strong></p>
   <p>
-    <img src="https://img.shields.io/badge/status-prototype-orange" alt="status">
-    <img src="https://img.shields.io/badge/Flutter-Android%20prototype-02569B" alt="Flutter">
+    <img src="https://img.shields.io/badge/status-foundation-blueviolet" alt="status">
+    <img src="https://img.shields.io/badge/Flutter-proposed-02569B" alt="Flutter">
     <img src="https://img.shields.io/badge/FastAPI-proposed-009688" alt="FastAPI">
     <img src="https://img.shields.io/badge/Python-3.11%2B-3776AB" alt="Python">
     <img src="https://img.shields.io/badge/license-academic%20project-lightgrey" alt="license">
@@ -13,7 +13,7 @@
 
 ![PuzzleVerse-3D conceptual hero](assets/illustrations/hero-puzzleverse.png)
 
-> **Status:** The repository contains the project foundation and an initial Android Flutter prototype (v0.1.0). The prototype supports local Rubik's Cube face turns, view rotation, shuffle, undo, and reset. Camera scanning, automatic solving, persistence, backend integration, player recommendations, and additional games are not implemented yet. Concept illustrations remain non-functional mockups.
+> **Status:** This repository is an academically documented project foundation. The visual assets are conceptual illustrations, and proposed interfaces or endpoints are explicitly labeled until implemented and evaluated.
 
 ## Why PuzzleVerse-3D?
 
@@ -23,7 +23,7 @@ Many puzzle applications provide either a flat game board or a standalone solver
 
 PuzzleVerse-3D separates the user experience, backend services, deterministic puzzle solving, computer vision, and player-intelligence experiments. This makes it possible to ship a testable MVP without treating every research idea as a finished feature.
 
-### Planned core capabilities
+### Core capabilities
 
 - Interactive Rubik's Cube experience, initially as a frontend proof of concept.
 - Manual cube color configuration for reliable baseline input.
@@ -60,18 +60,18 @@ The detailed architecture, data flow, and decision record are in [`docs/SYSTEM-A
 
 ## Technology direction
 
-Flutter is now used for the Android interaction proof of concept. Its cube is rendered with a custom 3D-style canvas painter; the final rendering-engine decision remains open pending performance and platform comparison. Python/FastAPI, OpenCV, Python ML tooling, REST, GitHub Actions, and Git/GitHub remain planned components. See [`docs/TECHNOLOGY-COMPARISON.md`](docs/TECHNOLOGY-COMPARISON.md).
+Flutter, Python/FastAPI, PostgreSQL or another justified persistence layer, OpenCV, Python ML tooling, REST, GitHub Actions, and Git/GitHub are the initial proposals. The 3D rendering decision remains open until the documented comparison is reviewed. See [`docs/TECHNOLOGY-COMPARISON.md`](docs/TECHNOLOGY-COMPARISON.md).
 
 ![Conceptual technology stack](assets/illustrations/technology-stack.png)
 
 ## MVP boundary
 
-The first MVP increment is a local Rubik's Cube practice prototype. A store-ready MVP still needs validated cube configuration, a deterministic solver, persistence, an evaluated ML baseline, a Number Puzzle vertical slice, real-device testing, and a production signing/release process. The current prototype must not be represented as a store-ready solver.
+The first defensible MVP prioritizes a working Rubik's Cube interaction, manual configuration, deterministic solving, backend integration, basic progress tracking, one measurable ML experiment, and a small Number Puzzle vertical slice. Camera recognition is included only if its data collection and evaluation remain feasible. The project does not claim any of these features are already implemented in this foundation repository.
 
 ## Repository map
 
 ```text
-frontend/app/      Flutter Android prototype and tests
+frontend/          Flutter application boundary (currently scaffold/documentation)
 backend/           FastAPI service boundary and tests
 machine-learning/  datasets, experiments, and reproducible ML code
 assets/            conceptual visuals and attribution records
@@ -82,16 +82,7 @@ tests/             cross-component and documentation checks
 
 ## Getting started
 
-Run the Flutter prototype and its tests:
-
-```bash
-cd frontend/app
-flutter pub get
-flutter test
-flutter run
-```
-
-The repository also provides a runnable FastAPI health endpoint and Python test baselines. Android CI builds a debug APK for testing; it is not signed for store distribution.
+This foundation currently provides a runnable FastAPI health endpoint and a Python test baseline. The Flutter application is intentionally not generated as a fake implementation; initialize it after the 3D rendering decision is approved.
 
 ```bash
 cd backend
@@ -156,7 +147,7 @@ Use an issue, create a branch such as `feature/feature-name`, run the relevant c
 
 ## Current limitations
 
-The codebase is still an early prototype, not a completed application. There is no trained model, benchmark, production database, camera recognizer, cube solver, or finalized 3D engine in this version. The Android debug APK is for testing only. Any future research result must include its dataset, method, metrics, and reproducibility notes.
+The codebase is a foundation, not a completed application. There is no trained model, benchmark, production database, camera recognizer, or finalized 3D engine in this commit. Any future result must include its dataset, method, metrics, and reproducibility notes.
 
 ## References
 
